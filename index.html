@@ -80,13 +80,23 @@
   
     <article id="post-AnidoidBuildSystem/AnidoidBuildSystem" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2021/01/07/AnidoidBuildSystem/AnidoidBuildSystem/" class="article-date">
-  <time class="dt-published" datetime="2021-01-07T07:47:59.030Z" itemprop="datePublished">2021-01-07</time>
+    <a href="/2021/01/08/AnidoidBuildSystem/AnidoidBuildSystem/" class="article-date">
+  <time class="dt-published" datetime="2021-01-08T09:49:30.000Z" itemprop="datePublished">2021-01-08</time>
 </a>
     
   </div>
   <div class="article-inner">
     
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/01/08/AnidoidBuildSystem/AnidoidBuildSystem/">安卓的三种BuildSystem方式</a>
+    </h1>
+  
+
+      </header>
     
     <div class="e-content article-entry" itemprop="articleBody">
       
@@ -95,23 +105,23 @@
 <li>下载JDK-1.8版本 配置环境变量 需要javac -version显示版本正确，而不是java -version</li>
 <li>下载SDK：可以在下载AndroidStudio时下载</li>
 <li>下载NDK： 可以在Unity中点击Edit–Preferences–External Tools中在NDK右侧下载官方版</li>
-<li>创建密钥：打开命令提示符进入安装的java–bin目录在输入<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Keytool -genkey -alias 密钥库名称 -keyalg RSA validity 有效时间 -keystore 密钥库文件名.keystore</span><br></pre></td></tr></table></figure>
+<li>创建密钥：打开命令提示符进入安装的java–bin目录在输入<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Keytool -genkey -alias 密钥库名称 -keyalg RSA validity 有效时间 -keystore 密钥库文件名.keystore</span><br></pre></td></tr></table></figure>
 然后按照要求输入创建即可，可将文件放入想要放置的位置，切记记住密码。</li>
 </ol>
-<hr>
 <h2 id="一、UnityRemote"><a href="#一、UnityRemote" class="headerlink" title="一、UnityRemote"></a>一、UnityRemote</h2><ol>
 <li>安卓机安装UnityRemote软件</li>
 <li>下载AndroidStudio中的Google USB Driver（下一种方法有下载方式）</li>
+<li>在Unity中Edit – Project Settings – Editor – Device更改设置为Any Andorid Device</li>
 <li>手机打开UnityRemote，在Unity中直接运行即可</li>
 </ol>
 <hr>
 <h2 id="二、AndroidStudio-AVD"><a href="#二、AndroidStudio-AVD" class="headerlink" title="二、AndroidStudio-AVD"></a>二、AndroidStudio-AVD</h2><ol>
 <li>电脑上安装<a target="_blank" rel="noopener" href="https://developer.android.google.cn/studio">AndroidStudio</a></li>
 <li>安装时勾选安装AVD选项（默认勾选）</li>
-<li>下载安装后双击打开软件一般情况会下载gradle，但由于网络会下载失败，这时复制下载网址<br><img src="1.PNG"><br>下载压缩包，将压缩包（不解压）放入C:/Users/(用户名目录)/.gradle/wrapper/dists/(压缩包对应的版本号目录)/(乱码目录)文件夹下，返回AndroidStudio等待软件自动解压完成</li>
-<li>点击File–Settings–Appearance&amp;Behavior-SystemSettings–AndroidSDK下载SDK<br><img src="2.PNG">以及镜像文件<br><img src="3.PNG"></li>
-<li>下载SDKTools–Google USB Driver<br><img src="4.PNG"></li>
-<li>全部下载完成之后点击Tools–AVD Manager–Create Virtual Device后选择<br><img src="5.PNG">–next<br><img src="6.PNG">–next–Finish</li>
+<li>下载安装后双击打开软件一般情况会下载gradle，但由于网络会下载失败，这时复制下载网址<br><img src="/2021/01/08/AnidoidBuildSystem/AnidoidBuildSystem/1.PNG"><br>下载压缩包，将压缩包（不解压）放入C:/Users/(用户名目录)/.gradle/wrapper/dists/(压缩包对应的版本号目录)/(乱码目录)文件夹下，返回AndroidStudio等待软件自动解压完成</li>
+<li>点击File–Settings–Appearance&amp;Behavior-SystemSettings–AndroidSDK下载SDK<br><img src="/2021/01/08/AnidoidBuildSystem/AnidoidBuildSystem/2.PNG">以及镜像文件<br><img src="/2021/01/08/AnidoidBuildSystem/AnidoidBuildSystem/3.PNG"></li>
+<li>下载SDKTools–Google USB Driver<br><img src="/2021/01/08/AnidoidBuildSystem/AnidoidBuildSystem/4.PNG"></li>
+<li>全部下载完成之后点击Tools–AVD Manager–Create Virtual Device后选择<br><img src="/2021/01/08/AnidoidBuildSystem/AnidoidBuildSystem/5.PNG">–next<br><img src="/2021/01/08/AnidoidBuildSystem/AnidoidBuildSystem/6.PNG">–next–Finish</li>
 <li>点击三角启动手机</li>
 </ol>
 <hr>
@@ -123,10 +133,12 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/01/07/AnidoidBuildSystem/AnidoidBuildSystem/" data-id="ckjmk0vww0000vgv2gmye1kfy" data-title="" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2021/01/08/AnidoidBuildSystem/AnidoidBuildSystem/" data-id="ckjmk0vww0000vgv2gmye1kfy" data-title="安卓的三种BuildSystem方式" class="article-share-link">分享</a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/" rel="tag">Unity3d</a></li></ul>
+
     </footer>
   </div>
   
@@ -256,7 +268,7 @@ hexo s //启动服务器</code></pre>
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Blog/" rel="tag">Blog</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Blog/" rel="tag">Blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Unity3d/" rel="tag">Unity3d</a></li></ul>
     </div>
   </div>
 
@@ -266,7 +278,7 @@ hexo s //启动服务器</code></pre>
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Blog/" style="font-size: 10px;">Blog</a>
+      <a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/Unity3d/" style="font-size: 10px;">Unity3d</a>
     </div>
   </div>
 
@@ -288,7 +300,7 @@ hexo s //启动服务器</code></pre>
       <ul>
         
           <li>
-            <a href="/2021/01/07/AnidoidBuildSystem/AnidoidBuildSystem/">(no title)</a>
+            <a href="/2021/01/08/AnidoidBuildSystem/AnidoidBuildSystem/">安卓的三种BuildSystem方式</a>
           </li>
         
           <li>
