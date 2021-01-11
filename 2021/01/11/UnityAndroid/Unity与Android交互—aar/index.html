@@ -4,17 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>Gsiyue</title>
+  <title>Unity与Android交互—aar | Gsiyue</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Welcome to my blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Gsiyue">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="AndroidStudio版本：4.1.1 Unity版本：2017.3.1.p4 AndroidStudio导出aar文件1.新建项目 Create New Project – Empty Activity – Next  Name的名称随意无关紧要  Minimus SDK是用来选择支持的最低版本（建议最低选择API 16）   – Finish  2.新建库 在app目录上右键 – New">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Unity与Android交互—aar">
+<meta property="og:url" content="http://example.com/2021/01/11/UnityAndroid/Unity%E4%B8%8EAndroid%E4%BA%A4%E4%BA%92%E2%80%94aar/index.html">
 <meta property="og:site_name" content="Gsiyue">
-<meta property="og:description" content="Welcome to my blog">
+<meta property="og:description" content="AndroidStudio版本：4.1.1 Unity版本：2017.3.1.p4 AndroidStudio导出aar文件1.新建项目 Create New Project – Empty Activity – Next  Name的名称随意无关紧要  Minimus SDK是用来选择支持的最低版本（建议最低选择API 16）   – Finish  2.新建库 在app目录上右键 – New">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-01-11T07:02:30.000Z">
+<meta property="article:modified_time" content="2021-01-11T07:11:33.175Z">
 <meta property="article:author" content="Gsiyue">
-<meta property="article:tag" content="Gsiyue">
+<meta property="article:tag" content="UnityAndroid">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Gsiyue" type="application/atom+xml">
@@ -76,9 +78,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-UnityAndroid/Unity与Android交互—aar" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-UnityAndroid/Unity与Android交互—aar" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/01/11/UnityAndroid/Unity%E4%B8%8EAndroid%E4%BA%A4%E4%BA%92%E2%80%94aar/" class="article-date">
   <time class="dt-published" datetime="2021-01-11T07:02:30.000Z" itemprop="datePublished">2021-01-11</time>
@@ -91,8 +91,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/01/11/UnityAndroid/Unity%E4%B8%8EAndroid%E4%BA%A4%E4%BA%92%E2%80%94aar/">Unity与Android交互—aar</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      Unity与Android交互—aar
     </h1>
   
 
@@ -178,188 +178,19 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-AnidoidBuildSystem/AnidoidBuildSystem" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/01/08/AnidoidBuildSystem/AnidoidBuildSystem/" class="article-date">
-  <time class="dt-published" datetime="2021-01-08T09:49:30.000Z" itemprop="datePublished">2021-01-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/01/08/AnidoidBuildSystem/AnidoidBuildSystem/">安卓的三种BuildSystem方式</a>
-    </h1>
+    <a href="/2021/01/08/AnidoidBuildSystem/AnidoidBuildSystem/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">安卓的三种BuildSystem方式</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ol>
-<li>下载AndroidBuildStudio（在Unity中添加模块）（在Unity2019以上版本可以顺便添加Android SDK &amp; NDK以及JDK，如果添加则可以跳过前言）</li>
-<li>下载JDK-1.8版本 配置环境变量 需要javac -version显示版本正确，而不是java -version</li>
-<li>下载SDK：可以在下载AndroidStudio时下载</li>
-<li>下载NDK： 可以在Unity中点击Edit–Preferences–External Tools中在NDK右侧下载官方版</li>
-<li>创建密钥：打开命令提示符进入安装的java–bin目录在输入<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Keytool -genkey -alias 密钥库名称 -keyalg RSA validity 有效时间 -keystore 密钥库文件名.keystore</span><br></pre></td></tr></table></figure>
-然后按照要求输入创建即可，可将文件放入想要放置的位置，切记记住密码。</li>
-</ol>
-<h2 id="一、UnityRemote"><a href="#一、UnityRemote" class="headerlink" title="一、UnityRemote"></a>一、UnityRemote</h2><ol>
-<li>安卓机安装UnityRemote软件</li>
-<li>下载AndroidStudio中的Google USB Driver（下一种方法有下载方式）</li>
-<li>在Unity中Edit – Project Settings – Editor – Device更改设置为Any Andorid Device</li>
-<li>手机打开UnityRemote，在Unity中直接运行即可</li>
-</ol>
-<hr>
-<h2 id="二、AndroidStudio-AVD"><a href="#二、AndroidStudio-AVD" class="headerlink" title="二、AndroidStudio-AVD"></a>二、AndroidStudio-AVD</h2><ol>
-<li>电脑上安装<a target="_blank" rel="noopener" href="https://developer.android.google.cn/studio">AndroidStudio</a></li>
-<li>安装时勾选安装AVD选项（默认勾选）</li>
-<li>下载安装后双击打开软件一般情况会下载gradle，但由于网络会下载失败，这时复制下载网址<br><img src="/2021/01/08/AnidoidBuildSystem/AnidoidBuildSystem/1.PNG"><br>下载压缩包，将压缩包（不解压）放入C:/Users/(用户名目录)/.gradle/wrapper/dists/(压缩包对应的版本号目录)/(乱码目录)文件夹下，返回AndroidStudio等待软件自动解压完成</li>
-<li>点击File–Settings–Appearance&amp;Behavior-SystemSettings–AndroidSDK下载SDK<br><img src="/2021/01/08/AnidoidBuildSystem/AnidoidBuildSystem/2.PNG">以及镜像文件<br><img src="/2021/01/08/AnidoidBuildSystem/AnidoidBuildSystem/3.PNG"></li>
-<li>下载SDKTools–Google USB Driver<br><img src="/2021/01/08/AnidoidBuildSystem/AnidoidBuildSystem/4.PNG"></li>
-<li>全部下载完成之后点击Tools–AVD Manager–Create Virtual Device后选择<br><img src="/2021/01/08/AnidoidBuildSystem/AnidoidBuildSystem/5.PNG">–next<br><img src="/2021/01/08/AnidoidBuildSystem/AnidoidBuildSystem/6.PNG">–next–Finish</li>
-<li>点击三角启动手机</li>
-</ol>
-<hr>
-<h2 id="三、模拟器"><a href="#三、模拟器" class="headerlink" title="三、模拟器"></a>三、模拟器</h2><ol>
-<li>如夜神模拟器</li>
-<li>直接将Apk文件拖入模拟器中运行即可</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/01/08/AnidoidBuildSystem/AnidoidBuildSystem/" data-id="ckjmk0vww0000vgv2gmye1kfy" data-title="安卓的三种BuildSystem方式" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3d/" rel="tag">Unity3d</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-
-  
-    <article id="post-博客搭建Hexo+GitHub" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2020/12/15/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAHexo+GitHub/" class="article-date">
-  <time class="dt-published" datetime="2020-12-15T02:57:18.000Z" itemprop="datePublished">2020-12-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2020/12/15/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAHexo+GitHub/">博客搭建Hexo + GitHub</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h3><p>官方网址：<a target="_blank" rel="noopener" href="http://nodejs.cn/">http://nodejs.cn/</a></p>
-<h3 id="cnpm安装-淘宝镜像下载"><a href="#cnpm安装-淘宝镜像下载" class="headerlink" title="cnpm安装-淘宝镜像下载"></a>cnpm安装-淘宝镜像下载</h3><pre><code>npm install -g cnpm  --registry=https://registry.npm.taobao.org</code></pre>
-<h3 id="hexo下载"><a href="#hexo下载" class="headerlink" title="hexo下载"></a>hexo下载</h3><pre><code>cnpm install -g hexo-cli</code></pre>
-<h3 id="新建文件夹"><a href="#新建文件夹" class="headerlink" title="新建文件夹"></a>新建文件夹</h3><pre><code>mkdir Blog</code></pre>
-<h3 id="初始化hexo"><a href="#初始化hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h3><p>安装git：<a target="_blank" rel="noopener" href="https://git-scm.com/download/win">https://git-scm.com/download/win</a><br>管理员用户进入Blog执行</p>
-<pre><code>hexo init //新建一个网站</code></pre>
-<h3 id="安装git部署插件"><a href="#安装git部署插件" class="headerlink" title="安装git部署插件"></a>安装git部署插件</h3><pre><code>cnpm install --save hexo-deployer-git</code></pre>
-<h3 id="在git中添加新存储库"><a href="#在git中添加新存储库" class="headerlink" title="在git中添加新存储库"></a>在git中添加新存储库</h3><p>库名使用 &lt;用户名&gt;.github.io</p>
-<h3 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h3><p>打开_config.yml最下面修改并添加</p>
-<pre><code>    type: git
-    repo: &lt;github中添加的库的网址&gt;
-    branch: master</code></pre>
-<h3 id="打开hexo"><a href="#打开hexo" class="headerlink" title="打开hexo"></a>打开hexo</h3><pre><code>hexo n &quot;文件名&quot; //新建一篇文章
-hexo g //生成静态文件
-hexo s //启动服务器</code></pre>
-<h3 id="部署hexo"><a href="#部署hexo" class="headerlink" title="部署hexo"></a>部署hexo</h3><pre><code>hexo d //部署服务器</code></pre>
-<h3 id="官方参考地址"><a href="#官方参考地址" class="headerlink" title="官方参考地址"></a>官方参考地址</h3><p><a target="_blank" rel="noopener" href="https://hexo.io/">https://hexo.io/</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/12/15/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAHexo+GitHub/" data-id="ckipn1obz0004rsv26jj807d0" data-title="博客搭建Hexo + GitHub" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Blog/" rel="tag">Blog</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2020/12/15/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2020-12-15T02:55:46.192Z" itemprop="datePublished">2020-12-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2020/12/15/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/12/15/hello-world/" data-id="ckipe9jy800000wv2etpb60dj" data-title="Hello World" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
 </section>
