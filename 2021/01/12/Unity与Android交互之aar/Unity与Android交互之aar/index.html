@@ -7,7 +7,7 @@
 
     
 
-    <title>UnityAndroid | HelloWorld</title>
+    <title>Unity与Android交互之aar | HelloWorld</title>
     <meta name="author" content="Gsiyue">
     
     <meta name="description" content="Welcome to my blog">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="Unity与Android交互之aar"/>
     <meta property="og:site_name" content="Gsiyue"/>
 
     
@@ -193,30 +193,119 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
-        <span class="breadcrumb">当前位置（标签）</span>
+        <span class="breadcrumb">当前位置（分类目录）</span>
         
+            
 
         
-            <a class="breadcrumb" href="/tags/UnityAndroid/">UnityAndroid</a>
+
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>Unity与Android交互之aar</h1>
+    
 
 
-    <div class="collection mt-0">
+            </div>
+            <time class="pink-link-context" datetime="2021-01-12T12:21:30.000Z"><a href="/2021/01/12/Unity%E4%B8%8EAndroid%E4%BA%A4%E4%BA%92%E4%B9%8Baar/Unity%E4%B8%8EAndroid%E4%BA%A4%E4%BA%92%E4%B9%8Baar/">2021-01-12</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
         
-            <a href="/2021/01/12/Unity%E4%B8%8EAndroid%E4%BA%A4%E4%BA%92%E4%B9%8Baar/Unity%E4%B8%8EAndroid%E4%BA%A4%E4%BA%92%E4%B9%8Baar/" class="collection-item grey-text text-darken-1">
-                <time datetime="2021-01-12T12:21:30.000Z">2021-01-12</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                Unity与Android交互之aar
-            </a>
+            <a href="/tags/UnityAndroid/" class="chip pink lighten-1">UnityAndroid</a>
         
     </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Android%E5%AF%BC%E5%87%BAaar%E6%96%87%E4%BB%B6"><span class="section table-of-contents-text">Android导出aar文件</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#1-%E5%88%9B%E5%BB%BAAndroidStudio%E9%A1%B9%E7%9B%AE"><span class="section table-of-contents-text">1. 创建AndroidStudio项目</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#2-%E6%96%B0%E5%BB%BALibrary"><span class="section table-of-contents-text">2. 新建Library</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#3-%E6%B7%BB%E5%8A%A0Unity%E7%9A%84classes-jar%E5%8C%85%E5%88%B0libs%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8B%EF%BC%88Project%E8%AF%95%E5%9B%BE%E5%8F%AF%E8%A7%81%EF%BC%89%E5%B9%B6%E5%8F%B3%E9%94%AE-%E2%80%93-Add-as-library%E6%B7%BB%E5%8A%A0%E5%88%B0%E5%BD%93%E5%89%8D%E5%BA%93"><span class="section table-of-contents-text">3. 添加Unity的classes.jar包到libs文件夹下（Project试图可见）并右键 – Add as library添加到当前库</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#4-%E6%96%B0%E5%BB%BA-Activity-%E6%88%96%E8%80%85-Class"><span class="section table-of-contents-text">4. 新建 Activity 或者 Class</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-5"><a class="section table-of-contents-link" href="#4-1-%E6%96%B0%E5%BB%BAActivity"><span class="section table-of-contents-text">4.1 新建Activity</span></a></li><li class="section table-of-contents-item section table-of-contents-level-5"><a class="section table-of-contents-link" href="#4-2-%E6%96%B0%E5%BB%BAClass"><span class="section table-of-contents-text">4.2 新建Class</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#5-%E7%82%B9%E5%87%BBBulid-%E2%80%93-Make-Module%E7%94%9F%E6%88%90aar%E6%96%87%E4%BB%B6%EF%BC%8C%E5%9C%A8build-output-aar%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8B%E6%89%BE%E5%88%B0%E6%96%87%E4%BB%B6"><span class="section table-of-contents-text">5. 点击Bulid – Make Module生成aar文件，在build\output\aar文件夹下找到文件</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#Unity%E4%BD%BF%E7%94%A8aar%E6%96%87%E4%BB%B6"><span class="section table-of-contents-text">Unity使用aar文件</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#1-%E4%BD%BF%E7%94%A8%E8%A7%A3%E5%8E%8B%E7%BC%A9%E8%BD%AF%E4%BB%B6%E6%89%93%E5%BC%80aar%E6%96%87%E4%BB%B6%E5%88%A0%E9%99%A4libs%E4%B8%8B%E7%9A%84classes-jar"><span class="section table-of-contents-text">1. 使用解压缩软件打开aar文件删除libs下的classes.jar</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#2-%E6%89%93%E5%BC%80Unity%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%B7%A5%E7%A8%8B%EF%BC%8C%E5%9C%A8%E8%B5%84%E6%BA%90%E7%9B%AE%E5%BD%95%E4%B8%8B%E6%96%B0%E5%BB%BAPlugins-Android%E7%9B%AE%E5%BD%95-%E5%B0%86aar%E6%96%87%E4%BB%B6%E6%8B%96%E5%85%A5Android%E7%9B%AE%E5%BD%95%E4%B8%8B"><span class="section table-of-contents-text">2. 打开Unity新建一个工程，在资源目录下新建Plugins&#x2F;Android目录,将aar文件拖入Android目录下</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#3-%E6%96%B0%E5%BB%BAScript%E4%BD%BF%E7%94%A8Actvity%E6%88%96Class"><span class="section table-of-contents-text">3. 新建Script使用Actvity或Class</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-5"><a class="section table-of-contents-link" href="#3-1%E4%BD%BF%E7%94%A8Actvity"><span class="section table-of-contents-text">3.1使用Actvity</span></a></li><li class="section table-of-contents-item section table-of-contents-level-5"><a class="section table-of-contents-link" href="#3-2%E4%BD%BF%E7%94%A8Class"><span class="section table-of-contents-text">3.2使用Class</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#4-Build%E4%B9%8B%E5%90%8E%E4%B8%8B%E8%BD%BD%E5%88%B0%E6%89%8B%E6%9C%BA%E8%BF%90%E8%A1%8C%E5%8D%B3%E5%8F%AF%E6%9F%A5%E7%9C%8B%E7%BB%93%E6%9E%9C"><span class="section table-of-contents-text">4. Build之后下载到手机运行即可查看结果</span></a></li></ol></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <ul>
+<li><p>Unity版本：2017.3.1.p4</p>
+</li>
+<li><p>AndroidStudio版本：4.1.1</p>
+</li>
+</ul>
+<h3 id="Android导出aar文件"><a href="#Android导出aar文件" class="headerlink" title="Android导出aar文件"></a>Android导出aar文件</h3><h4 id="1-创建AndroidStudio项目"><a href="#1-创建AndroidStudio项目" class="headerlink" title="1. 创建AndroidStudio项目"></a>1. 创建AndroidStudio项目</h4><ul>
+<li>项目的名称随便写，后面用不到</li>
+<li>Minimus SDK选择最低即可</li>
+</ul>
+<h4 id="2-新建Library"><a href="#2-新建Library" class="headerlink" title="2. 新建Library"></a>2. 新建Library</h4><p>   在Project窗口右键 – New – Module – Android Library</p>
+<ul>
+<li>Module name为库名</li>
+<li>Bytecode Level使用 7 或者 6 （否则在最后Unity中Build时会报错）</li>
+</ul>
+<h4 id="3-添加Unity的classes-jar包到libs文件夹下（Project试图可见）并右键-–-Add-as-library添加到当前库"><a href="#3-添加Unity的classes-jar包到libs文件夹下（Project试图可见）并右键-–-Add-as-library添加到当前库" class="headerlink" title="3. 添加Unity的classes.jar包到libs文件夹下（Project试图可见）并右键 – Add as library添加到当前库"></a>3. 添加Unity的classes.jar包到libs文件夹下（Project试图可见）并右键 – Add as library添加到当前库</h4><ul>
+<li>classes.jar在Unity的安装目录下的\Editor\Data\PlaybackEngines\AndroidPlayer\Variations\mono\Release\Classes</li>
+</ul>
+<h4 id="4-新建-Activity-或者-Class"><a href="#4-新建-Activity-或者-Class" class="headerlink" title="4. 新建 Activity 或者 Class"></a>4. 新建 Activity 或者 Class</h4><ul>
+<li><p>Activity 使用略微复杂，但可以使用Android提供的一些功能，如Toast</p>
+</li>
+<li><p>Class 使用简单，但只能写一些自己的方法（也可以写一些方法来实现Toast提供一篇大佬的文章- <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/86b275da600e">地址连接</a>）</p>
+</li>
+<li><p>新建Activity或Class选一种即可</p>
+</li>
+</ul>
+<h5 id="4-1-新建Activity"><a href="#4-1-新建Activity" class="headerlink" title="4.1 新建Activity"></a>4.1 新建Activity</h5><p>​    4.1.1 右键java文件夹下的包名的文件 – New – Activity – Empty Activity（全部默认即可）</p>
+<p>​    4.1.2 删除res – layout下自动生成的布局文件，防止与Unity发生冲突</p>
+<p>​    4.1.3 打开manifests\AndroidManifest添加代码:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">application</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">&quot;.MainActivity&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">&quot;android.intent.action.MAIN&quot;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">category</span> <span class="attr">android:name</span>=<span class="string">&quot;android.intent.category.LAUNCHER&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">        &lt;meta-data</span><br><span class="line">            android:name=&quot;unityplayer.UnityActivity&quot;</span><br><span class="line">            android:value=&quot;true&quot;/&gt;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">application</span>&gt;</span>       </span><br></pre></td></tr></table></figure>
+
+<p>​    4.1.4 返回Activity文件添加代码，如实现一个Toast：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ShowToast</span><span class="params">()</span></span>&#123;</span><br><span class="line">    runOnUiThread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            Toast.makeText(MainActivity.<span class="keyword">this</span>, <span class="string">&quot;This Is Android&quot;</span>, Toast.LENGTH_SHORT).show();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​    4.1.5 修改Activity的继承为UnityPlayerActivity</p>
+<h5 id="4-2-新建Class"><a href="#4-2-新建Class" class="headerlink" title="4.2 新建Class"></a>4.2 新建Class</h5><p>​    4.2.1 右键java文件夹下的包名的文件 – New – Java Class（填写一个类名如UnityTest）</p>
+<p>​    4.2.2 为Class添加方法，如:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">Add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-点击Bulid-–-Make-Module生成aar文件，在build-output-aar文件夹下找到文件"><a href="#5-点击Bulid-–-Make-Module生成aar文件，在build-output-aar文件夹下找到文件" class="headerlink" title="5. 点击Bulid – Make Module生成aar文件，在build\output\aar文件夹下找到文件"></a>5. 点击Bulid – Make Module生成aar文件，在build\output\aar文件夹下找到文件</h4><h3 id="Unity使用aar文件"><a href="#Unity使用aar文件" class="headerlink" title="Unity使用aar文件"></a>Unity使用aar文件</h3><h4 id="1-使用解压缩软件打开aar文件删除libs下的classes-jar"><a href="#1-使用解压缩软件打开aar文件删除libs下的classes-jar" class="headerlink" title="1. 使用解压缩软件打开aar文件删除libs下的classes.jar"></a>1. 使用解压缩软件打开aar文件删除libs下的classes.jar</h4><h4 id="2-打开Unity新建一个工程，在资源目录下新建Plugins-Android目录-将aar文件拖入Android目录下"><a href="#2-打开Unity新建一个工程，在资源目录下新建Plugins-Android目录-将aar文件拖入Android目录下" class="headerlink" title="2. 打开Unity新建一个工程，在资源目录下新建Plugins/Android目录,将aar文件拖入Android目录下"></a>2. 打开Unity新建一个工程，在资源目录下新建Plugins/Android目录,将aar文件拖入Android目录下</h4><h4 id="3-新建Script使用Actvity或Class"><a href="#3-新建Script使用Actvity或Class" class="headerlink" title="3. 新建Script使用Actvity或Class"></a>3. 新建Script使用Actvity或Class</h4><ul>
+<li>前面创建的是哪一种就用哪一种</li>
+</ul>
+<h5 id="3-1使用Actvity"><a href="#3-1使用Actvity" class="headerlink" title="3.1使用Actvity"></a>3.1使用Actvity</h5><p>​    3.1.1 在script加入如下代码，即可实现在应用启动时弹出Toast</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//参数为固定格式</span></span><br><span class="line">    AndroidJavaClass ajc = <span class="keyword">new</span> AndroidJavaClass(<span class="string">&quot;com.unity3d.player.UnityPlayer&quot;</span>);</span><br><span class="line">    AndroidJavaObject ajo = _ajc.GetStatic&lt;AndroidJavaObject&gt;(<span class="string">&quot;currentActivity&quot;</span>);</span><br><span class="line">    <span class="comment">//第一个参数就是方法名，需要传递实参就写在方法名后面</span></span><br><span class="line">    ajo.Call(<span class="string">&quot;ShowToast&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="3-2使用Class"><a href="#3-2使用Class" class="headerlink" title="3.2使用Class"></a>3.2使用Class</h5><p>​    3.2.1 在script加入代码：</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> Text textUI;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Start</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    AndroidJavaObject ajo = <span class="keyword">new</span> AndroidJavaObject(<span class="string">&quot;com.gsiyue.unitylib.UnityTest&quot;</span>);</span><br><span class="line">    textUI.text = ajo.call&lt;<span class="built_in">int</span>&gt;(<span class="string">&quot;Add&quot;</span>, <span class="number">33</span>, <span class="number">66</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>​    3.2.2 在Unity中新建一个Text的UI并赋值给textUI</p>
+<h4 id="4-Build之后下载到手机运行即可查看结果"><a href="#4-Build之后下载到手机运行即可查看结果" class="headerlink" title="4. Build之后下载到手机运行即可查看结果"></a>4. Build之后下载到手机运行即可查看结果</h4>
+                
+
+
+<p class="pink-link-context">
+    <a href="/2021/01/08/AnidoidBuildSystem/AnidoidBuildSystem/" rel="next" title="安卓的三种BuildSystem方式">
+    下一篇：安卓的三种BuildSystem方式
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
 
 
 </div>
