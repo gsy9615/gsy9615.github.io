@@ -1,0 +1,804 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+    <title>反射 | HelloWorld</title>
+    <meta name="author" content="Gsiyue">
+    
+    <meta name="description" content="Welcome to my blog">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="反射"/>
+    <meta property="og:site_name" content="Gsiyue"/>
+
+    
+    <meta property="og:image" content=""/>
+    
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="Gsiyue" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+    
+        <link rel="stylesheet" href="/css/lib/prettify-tomorrow-night-eighties.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="indigo">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down">Gsiyue</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/" >
+                            <i class="fa fa-home "></i>
+                            
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/archives" >
+                            <i class="fa fa-archive "></i>
+                            
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            
+                            分类
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-reading " href="/reading" >
+                            <i class="fa fa-book "></i>
+                            
+                            读书
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-about " href="/about" >
+                            <i class="fa fa-user "></i>
+                            
+                            关于
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-search modal-trigger " href="#search" >
+                            <i class="fa fa-search "></i>
+                            
+                            搜索
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav indigo darken-1" id="main-menu">
+        
+        <li class="side-user">
+            <div class="row">
+                <div class="col s4 no-padding">
+                    <img class="avatar-image circle responsive-img" src="http://chuantu.xyz/t6/741/1610513441x-1404755047.jpg" alt="User Avatar">
+                </div>
+                <div class="info col s8 valign-wrapper no-padding">
+                    <div class="valign">
+                        <p class="name">肆月</p>
+                        <p class="desc">Unity/C#</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/" >
+                    <i class="fa fa-home "></i>
+                    
+                    首页
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/archives" >
+                    <i class="fa fa-archive "></i>
+                    
+                    归档
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    
+                    分类
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-reading " href="/reading" >
+                    <i class="fa fa-book "></i>
+                    
+                    读书
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-about " href="/about" >
+                    <i class="fa fa-user "></i>
+                    
+                    关于
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-search modal-trigger " href="#search" >
+                    <i class="fa fa-search "></i>
+                    
+                    搜索
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav indigo darken-1" id="category-menu">
+    
+
+            
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/Unity/">
+                    Unity <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/UnityAndroid/">
+                    UnityAndroid <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/Blog/">
+                    Blog <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/C/">
+                    C <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/UnityUI/">
+                    UnityUI <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/xLua/">
+                    xLua <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+<div id="search" class="modal search-modal">
+    <div class="row">
+        <div class="input-field col s12">
+              <input id="search-input" type="text">
+              <label for="search-input">搜索</label>
+        </div>
+
+    </div>
+    <div id="search-result" class="search-result col s12">
+
+    </div>
+</div>
+
+
+    <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper indigo">
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/C/">C#</a>
+
+
+        
+
+        
+    </div>
+</nav>
+
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>反射</h1>
+    
+
+
+            </div>
+            <time class="pink-link-context" datetime="2021-02-15T06:02:30.000Z"><a href="/2021/02/15/C#/%E5%8F%8D%E5%B0%84/">2021-02-15</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/C/" class="chip pink lighten-1">C#</a>
+        
+    </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#%E6%A6%82%E5%BF%B5"><span class="section table-of-contents-text">概念</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#%E5%8F%8D%E5%B0%84%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="section table-of-contents-text">反射的作用</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#%E8%AF%AD%E6%B3%95%E7%9B%B8%E5%85%B3"><span class="section table-of-contents-text">语法相关</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#Type"><span class="section table-of-contents-text">Type</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%8E%B7%E5%8F%96Type"><span class="section table-of-contents-text">获取Type</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E5%BE%97%E5%88%B0%E7%B1%BB%E7%9A%84%E7%A8%8B%E5%BA%8F%E9%9B%86%E4%BF%A1%E6%81%AF"><span class="section table-of-contents-text">得到类的程序集信息</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%8E%B7%E5%8F%96%E7%B1%BB%E4%B8%AD%E7%9A%84%E6%89%80%E6%9C%89%E5%85%AC%E5%85%B1%E6%88%90%E5%91%98"><span class="section table-of-contents-text">获取类中的所有公共成员</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#%E8%8E%B7%E5%8F%96%E7%B1%BB%E7%9A%84%E5%85%AC%E5%85%B1%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%B9%B6%E8%B0%83%E7%94%A8"><span class="section table-of-contents-text">获取类的公共构造函数并调用</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="section table-of-contents-text">获取所有构造函数</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#%E8%8E%B7%E5%8F%96%E5%85%B6%E4%B8%AD%E4%B8%80%E4%B8%AA%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0-%E5%B9%B6%E6%89%A7%E8%A1%8C"><span class="section table-of-contents-text">获取其中一个构造函数 并执行</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#%E8%8E%B7%E5%8F%96%E7%B1%BB%E7%9A%84%E5%85%AC%E5%85%B1%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F"><span class="section table-of-contents-text">获取类的公共成员变量</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#%E8%8E%B7%E5%8F%96%E7%B1%BB%E7%9A%84%E5%85%AC%E5%85%B1%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95"><span class="section table-of-contents-text">获取类的公共成员方法</span></a></li><li class="section table-of-contents-item section table-of-contents-level-4"><a class="section table-of-contents-link" href="#%E5%85%B6%E5%AE%83"><span class="section table-of-contents-text">其它</span></a></li></ol></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#Assembly"><span class="section table-of-contents-text">Assembly</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#Activator"><span class="section table-of-contents-text">Activator</span></a></li></ol></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <p>最近在学游戏框架StrangeIoc时需要用到反射和依赖注入相关知识，以前未曾学习过相关内容，特此记录</p>
+<p>参考来源：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Ar4y1K7AK?p=21">反射概念和Type类</a>   <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Ar4y1K7AK?p=22">反射关键类Assembly和Activator</a></p>
+<h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>反射：程序在运行时，可以查看自身程序集或者自身的元数据，一个运行的程序查看本身或者其他程序的元数据的行为就叫反射。</p>
+<p>程序集：是由编译器编译得到的，供进一步编译执行的那个中间产物，在Windows系统中，它一般表现后缀为<code>.dll</code>（库文件）或者<code>.exe</code>（可执行文件）的格式</p>
+<p>元数据：元数据就是用来描述数据的数据（程序中的类，类中的函数、变量等等信息就是程序的元数据）</p>
+<h1 id="反射的作用"><a href="#反射的作用" class="headerlink" title="反射的作用"></a>反射的作用</h1><p>因为反射可以在程序集编译后获取信息，所以它提高了程序的拓展性和灵活性</p>
+<ol>
+<li>程序运行时得到所有元数据，包括元数据的特性</li>
+<li>程序运行时，实例化对象，操作对象</li>
+<li>程序运行时创建新对象，用这些对象执行任务</li>
+</ol>
+<h1 id="语法相关"><a href="#语法相关" class="headerlink" title="语法相关"></a>语法相关</h1><h2 id="Type"><a href="#Type" class="headerlink" title="Type"></a>Type</h2><p>Type（类的信息类）</p>
+<p>它是反射功能的基础</p>
+<p>它是访问元数据的主要方式</p>
+<p>使用Type的成员获取有关类型声明的信息</p>
+<p>有关类型的成员（如构造函数、方法、字段、属性和类的事件）</p>
+<h3 id="获取Type"><a href="#获取Type" class="headerlink" title="获取Type"></a>获取Type</h3><ol>
+<li><p>万物之父object中的<code>GetType()</code>可以获取对象的Type</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> a = <span class="number">100</span>;</span><br><span class="line">Type type = a.GetType();</span><br><span class="line">Console.WriteLine(type);</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="2">
+<li><p>通过<code>typeof</code>关键字传入类名也可以得到对象的Type</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Type type2 = <span class="keyword">typeof</span>(<span class="built_in">int</span>);</span><br><span class="line">Console.WriteLine(type2);</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="3">
+<li><p>通过类的名字也可以获取类型（类名必须包含命名空间）</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Type type3 = Type.GetType(<span class="string">&quot;System.Int32&quot;</span>);</span><br><span class="line">Console.WriteLine(type3);</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+<h3 id="得到类的程序集信息"><a href="#得到类的程序集信息" class="headerlink" title="得到类的程序集信息"></a>得到类的程序集信息</h3><p>可以通过Type可以得到类型所在的程序集信息</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Console.WriteLine(type.Assembly);</span><br></pre></td></tr></table></figure>
+
+<h3 id="获取类中的所有公共成员"><a href="#获取类中的所有公共成员" class="headerlink" title="获取类中的所有公共成员"></a>获取类中的所有公共成员</h3><p>首先得到Type</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Type t = <span class="keyword">typeof</span>(Test);</span><br></pre></td></tr></table></figure>
+
+<p>然后得到所有公共成员</p>
+<p>需引用命名空间 <code>using System.Reflection;</code></p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">MemberInfo[] infos = t.GetMembers();</span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; infos.Length; i++)</span><br><span class="line">&#123;</span><br><span class="line">    Console.WriteLine(infos[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="获取类的公共构造函数并调用"><a href="#获取类的公共构造函数并调用" class="headerlink" title="获取类的公共构造函数并调用"></a>获取类的公共构造函数并调用</h3><h4 id="获取所有构造函数"><a href="#获取所有构造函数" class="headerlink" title="获取所有构造函数"></a>获取所有构造函数</h4><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ConstructorInfo[] ctors = t.GetConstructors();</span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; ctors.Length; i++)</span><br><span class="line">&#123;</span><br><span class="line">    Console.WriteLine(ctors[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="获取其中一个构造函数-并执行"><a href="#获取其中一个构造函数-并执行" class="headerlink" title="获取其中一个构造函数 并执行"></a>获取其中一个构造函数 并执行</h4><p>得构造函数传入 Type数组 数组中内容按顺序是参数类型</p>
+<p>执行构造函数传入 object数组 表示按顺序传入的参数</p>
+<ul>
+<li>得到无参构造</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ConstructorInfo info = t.GetConstructor(<span class="keyword">new</span> Type[<span class="number">0</span>]);</span><br></pre></td></tr></table></figure>
+
+<p>​    执行无参构造 无参构造 没有参数 传null</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Test obj = info.Invoke(<span class="literal">null</span>) <span class="keyword">as</span> Test;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>得到有参构造</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ConstructorInfo info2 = t.GetConstructor(<span class="keyword">new</span> Type[] &#123; <span class="keyword">typeof</span>(<span class="built_in">int</span>) &#125;);</span><br><span class="line">Test obj2 = info2.Invoke(<span class="keyword">new</span> <span class="built_in">object</span>[]&#123; <span class="number">2</span> &#125;) <span class="keyword">as</span> Test;</span><br><span class="line">Console.WriteLine(obj2.int1);</span><br></pre></td></tr></table></figure>
+
+<h4 id="获取类的公共成员变量"><a href="#获取类的公共成员变量" class="headerlink" title="获取类的公共成员变量"></a>获取类的公共成员变量</h4><ol>
+<li><p>得到所有成员变量</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">FieldInfo[] fieldInfos = t.GetFields();</span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; fieldInfos.Length; i++)</span><br><span class="line">&#123;</span><br><span class="line">    Console.WriteLine(fieldInfos[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+<ol start="2">
+<li><p>得到指定名称的公共成员变量</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FieldInfo fieldInfo = t.GetField(<span class="string">&quot;变量名&quot;</span>);</span><br><span class="line">Console.WriteLine(fieldInfo);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过反射获取和设置</p>
+<p>先实例化Test对象</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Test test = <span class="keyword">new</span> Test();</span><br><span class="line">test.j = <span class="number">99</span>;</span><br><span class="line">test.str = <span class="string">&quot;2233&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+<ol>
+<li><p>通过反射，获取对象的某个变量的值</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Console.WriteLine(fieldInfo.GetValue(test));</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过反射，设置对象的某个变量的值</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fieldInfo.SetValue(test, <span class="number">100</span>);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h4 id="获取类的公共成员方法"><a href="#获取类的公共成员方法" class="headerlink" title="获取类的公共成员方法"></a>获取类的公共成员方法</h4><p>通过Type类中的 <code>GetMethod</code>方法 得到类中的方法</p>
+<p><code>MethodInfo</code> 是方法反射的信息</p>
+<ul>
+<li>获取所有成员方法</li>
+</ul>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Type strType = <span class="keyword">typeof</span>(<span class="built_in">string</span>);</span><br><span class="line">MethodInfo[] methods = strType.GetMethods();</span><br><span class="line"><span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; methods.Length; i++)</span><br><span class="line">&#123;</span><br><span class="line">    Console.WriteLine(methods[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>获取单个成员方法</li>
+</ul>
+<ol>
+<li><p>如果存在方法重载 用Type数组表示参数类型</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MethodInfo subStr = strType.GetMethod(<span class="string">&quot;Substring&quot;</span>, <span class="keyword">new</span> Type[] &#123;<span class="keyword">typeof</span>(<span class="built_in">int</span>), <span class="keyword">typeof</span>(<span class="built_in">int</span>)&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>调用该方法</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">string</span> str = <span class="string">&quot;Hello world!&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>第一个参数 相当于 是那个对象要执行这个成员方法（如果是静态方法 Invoke中的第一个参数传null即可）</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">object</span> result = subStr.Invoke(str, <span class="keyword">new</span> <span class="built_in">object</span>[] &#123;<span class="number">6</span>, <span class="number">5</span>&#125;);</span><br><span class="line">Console.WriteLine(result);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h4 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h4><ul>
+<li><p>得枚举</p>
+<ul>
+<li><code>GetEnumName</code></li>
+<li><code>GetEnumNames</code></li>
+</ul>
+</li>
+<li><p>得事件</p>
+<ul>
+<li><code>GetEvent</code></li>
+<li><code>GetEvents</code></li>
+</ul>
+</li>
+<li><p>得接口</p>
+<ul>
+<li><code>GetInterface</code></li>
+<li><code>GetInterfaces</code></li>
+</ul>
+</li>
+<li><p>得属性</p>
+<ul>
+<li><code>GetProperty</code></li>
+<li><code>GetPropertys</code></li>
+</ul>
+</li>
+<li><p>等等</p>
+</li>
+</ul>
+<h2 id="Assembly"><a href="#Assembly" class="headerlink" title="Assembly"></a>Assembly</h2><p>程序集类</p>
+<p>主要用来加载其他程序集，加载后才能用Type来使用其他程序集中得信息</p>
+<p>如果想要使用不是自己程序集中的内容 需要先加载程序集 比如<code>dll</code>文件（库文件）</p>
+<p>简单的把库文件看成一种代码仓库，他提供给使用者一些可以直接拿来用的变量、函数或类</p>
+<p>三种加载程序集额函数</p>
+<ul>
+<li><p>加载在同一文件夹下的其他程序集</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Assembly assembly = Assembly.Load(<span class="string">&quot;程序集名称&quot;</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>加载在不同一文件夹下的其他程序集</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Assembly assembly = Assembly.LoadFrom(<span class="string">&quot;包含程序集清单的文件的名称或路径&quot;</span>);</span><br><span class="line">Assembly assembly = Assembly.LoadFrom(<span class="string">&quot;要加载的文件的完全限定路径&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h2 id="Activator"><a href="#Activator" class="headerlink" title="Activator"></a>Activator</h2><p>用于快速实例化对象得类</p>
+<p>用于将Type对象快速实例化为对象</p>
+<p>先得到Type</p>
+<p>然后 快速实例化一个对象</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Type testType = <span class="keyword">typeof</span>(Test);</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><p>无参构造</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Test testObj = Activator.CreateInstance(testType) <span class="keyword">as</span> Test;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>有参数构造</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Test testObj = Activator.CreateInstance(testType, <span class="number">99</span>) <span class="keyword">as</span> Test;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Test testObj = Activator.CreateInstance(testType, <span class="number">66</span>, <span class="string">&quot;2233&quot;</span>) <span class="keyword">as</span> Test;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+
+                
+<p class="pink-link-context">
+    <a href="/2021/03/18/xLua/Untitled/" rel="next" title="Unity中使用xLua时Interface映射报错">
+    上一篇：Unity中使用xLua时Interface映射报错
+  </a>
+</p>
+
+
+
+<p class="pink-link-context">
+    <a href="/2021/02/03/C#/%E6%89%A9%E5%B1%95%E6%96%B9%E6%B3%95/" rel="next" title="C#—扩展方法">
+    下一篇：C#—扩展方法
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+</div>
+
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large pink">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect green" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse yellow darken-1"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+    </ul>
+  </div>
+
+    </main>
+    <footer class="page-footer indigo darken-1">
+    
+    <div class="footer-container container">
+        <div class="row">
+            
+            <div class="social-group col m4 s12">
+                <h5 class="white-text">社交</h5>
+                
+                    <a class="social-link" href="" target="_blank">
+                        <i class="fa fa-2x fa-weibo"></i>
+                    </a>
+                
+                    <a class="social-link" href="" target="_blank">
+                        <i class="fa fa-2x fa-github"></i>
+                    </a>
+                
+                    <a class="social-link" href="" target="_blank">
+                        <i class="fa fa-2x fa-rss"></i>
+                    </a>
+                
+                
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+    </script>
+    <div class="site-visitors-container white-text">
+        <span>
+            <i class="fa fa-user"></i>
+            <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+        </span>
+        <span>&nbsp;|&nbsp;</span>
+        <span>
+            <i class="fa fa-eye"></i>
+            <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+        </span>
+    </div>
+
+
+            </div>
+            
+
+            
+            <div class="col m8 s12">
+                <h5 class="white-text">友情链接</h5>
+                
+                    <a class="social-link" href="http://raytaylorlin.com/" target="_blank">raytaylorism主题作者的技术博客</a>
+                
+                    <a class="social-link" href="https://github.com/raytaylorlin" target="_blank">Github地址（测试友情链接）</a>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="footer-copyright pink-link-context">
+        <div class="container">
+            © 2016 example.com, All rights reserved.
+            <p class="right" style="margin-top: 0;">本博客由 <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a> 强力驱动 | 主题 <a target="_blank" rel="noopener" href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>
+        </div>
+    </div>
+</footer>
+
+
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+
+<script>
+    (function($) {
+        $(document).ready(function() {
+            // 隐藏禁用javascript（针对微信内置浏览器）的提示
+            $('.noscript').hide();
+
+            // 图片缩放效果
+            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
+
+            // 给图片加上点击放大效果（materialbox插件）
+            $imgs.addClass('materialboxed').each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+            // 优化表格的显示
+            $('table').each(function() {
+                var $table = $(this);
+                // 除去多行代码的情况
+                if ($table.find('pre').length == 0) {
+                    $table.addClass('responsive-table striped bordered');
+                }
+            });
+
+            // 首页幻灯片
+            $('.slider').slider({indicators: true, full_width: true, interval: 8000});
+
+            $(".button-collapse").sideNav();
+            $(".category-menu").sideNav();
+
+            // 针对gallery post
+            $('.carousel').carousel({full_width: true});
+            $('.carousel-control.prev').click(function() {
+                $('.carousel').carousel('prev');
+            });
+            $('.carousel-control.next').click(function() {
+                $('.carousel').carousel('next');
+            });
+
+            // 文章目录
+            $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+
+            // 目录随屏幕滚动（防止目录过长越过footer）
+            var $toc = $('.toc');
+            var scrollTargetTop = 0;
+            $(window).scroll(function() {
+                var $activeLink = $toc.find('a.active.section');
+                if ($(window).scrollTop() < 100) {
+                    scrollTargetTop = 0;
+                } else {
+                    if ($activeLink[0]) {
+                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
+                    }
+                }
+                $toc.css('top', '-' + scrollTargetTop + 'px');
+            });
+
+            // 修正文章目录的left-border颜色
+            var color = $('.table-of-contents-text').css('color');
+            $('.table-of-contents-link').css('border-left-color', color);
+
+            // 针对移动端做的优化：FAB按钮点击一下收回
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.fixed-action-btn').addClass('click-to-toggle');
+            }
+            // 回到顶部
+            $('.btn-return-top').click(function() {
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+            // 重置读书页面的Tab标签页的颜色
+            $('li.tab a').hover(function() {
+                $(this).toggleClass('text-lighten-4');
+            });
+            $('.indicator').addClass('pink lighten-2');
+
+            
+            // 添加new标签
+            $('').append('<span class="new badge pink"></span>');
+            
+
+            // 搜索功能
+            $('.modal-trigger').leanModal({
+                // 打开搜索框时自动聚焦
+                ready: function() {
+                    if ($('#search').is(":visible")) {
+                        $('#search-input').focus();
+                    }
+                }
+            });
+            var searchXml = "";
+            if (searchXml.length == 0) {
+             	searchXml = "search.xml";
+            }
+            var searchPath = "/" + searchXml;
+            initSearch(searchPath, 'search-input', 'search-result');
+        });
+
+        // 初始化搜索与匹配函数
+        var initSearch = function(path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function(xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function() {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function() {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function(data) {
+                            var isMatch = true;
+                            var content_index = [];
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title != '' && data_content != '') {
+                                keywords.forEach(function(keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i == 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
+                                });
+
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start == 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substring(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function(keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
+                                    });
+
+                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        }
+    })(jQuery);
+</script>
+
+
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" async
+  src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+</body>
+</html>
